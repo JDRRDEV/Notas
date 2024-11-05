@@ -1,57 +1,98 @@
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
-    text-align: center;
     width: 80%;
-    max-width: 900px;
-    margin: 20px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
-    color: #2c3e50;
-    margin-bottom: 20px;
+    color: #333;
 }
 
-table {
+.materias-table {
     width: 100%;
-    border-collapse: collapse;
     margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+.materias-table th, .materias-table td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
-th {
-    background-color: #3498db;
+.materias-table th {
+    background-color: #333;
     color: white;
 }
 
-tr:nth-child(even) {
+.materias-table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-tr:hover {
-    background-color: #ecf0f1;
+.materias-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.theme-toggle {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.theme-toggle:hover {
+    background-color: #555;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-theme .materias-table th {
+    background-color: #222;
+}
+
+body.dark-theme .button {
+    background-color: #0056b3;
+}
+
+body.dark-theme .theme-toggle {
+    background-color: #555;
 }
